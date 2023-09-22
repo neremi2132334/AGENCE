@@ -1,0 +1,2 @@
+﻿FactoryVaisseau.obj : error LNK2019: symbole externe non résolu "public: __cdecl Faction::Faction(int,int,int,int)" (??0Faction@@QEAA@HHHH@Z) référencé dans la fonction "private: static class Faction * __cdecl FactoryVaisseau::getRandomFaction(void)" (?getRandomFaction@FactoryVaisseau@@CAPEAVFaction@@XZ)
+M:\code\Interface et base de données\Agence\x64\Debug\Agence.exe : fatal error LNK1120: 1 externes non résolus
