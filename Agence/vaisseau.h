@@ -1,39 +1,33 @@
 #pragma once
-#include <iostream>
+#include <string> 
+#include "Faction.h"
+#include "Station.h"
+class Station;
 
-class vaisseau
+class Vaisseau
 {
-protected :
+protected:
+	int attaque;
+	int defense;
+	int vie;
+	int capacite;
+	std::string nom;
+	int niveau;
+	int exp;
+	std::string type;
+	Faction* maFaction; 
 
-    int valeurMarchande;
-
-    int attaque;
-
-    int defense;
-
-    int pv;
-
-    int capacite;
-
-    std::string nom;
-
-    int lvl;
-
-    int exp;
-
-    std::string classe;
 
 public:
-
-    vaisseau(int att, int def, int pv, int capacite, int lvl, int ex, std::string name);
-    ~vaisseau();
-
-    int getAtt();
-    int getDef();
-    int getVie();
-
-    virtual std::string to_string();
-
-
+	Vaisseau(Faction* maFaction, std::string name);
+	Vaisseau(int att, int def, int hp, int cap, int lvl, int ex, std::string name, Faction* maFaction);
+	~Vaisseau();
+	int getAtt();
+	int getDef();
+	int getVie();
+	void setVie(int nouvelleVie);
+	void Amelioration(Station* station);
+	virtual std::string to_string();
+	std::string genererNomAleatoire();
 };
 

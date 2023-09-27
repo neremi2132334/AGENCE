@@ -1,17 +1,12 @@
 #pragma once
-#include "vaisseau.h"  
-#include "Faction.h"   
-
-
+#include "Vaisseau.h"
+#include "Faction.h"
 class FactoryVaisseau
 {
-
-public:
-    static vaisseau* getRandomVaisseau();
+public: 
+	static Vaisseau* getRandomVaisseau(Faction* maFaction);
 
 private:
-    static Faction* getRandomFaction();
-
+	static Faction* getRandomFaction();
 };
-
 

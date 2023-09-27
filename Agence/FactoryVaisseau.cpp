@@ -1,49 +1,42 @@
 #include "FactoryVaisseau.h"
-#include "vaisseau.h"
-#include <vector> 
-#include <string>  
-#include <cstdlib>
-#include <ctime>
+#include "Utilitaire.h"
+#include "Faction.h"
+#include "Transport.h"
+#include "Guerre.h"
+#include "Livraison.h"
 
-int genererNb(int min, int max) {
-    return rand() % (max - min + 1) + min;
-}
-
-
-vaisseau* FactoryVaisseau::getRandomVaisseau()
+Vaisseau* FactoryVaisseau::getRandomVaisseau(Faction* maFaction)
 {
-    srand(time(0));
-    int attaque = genererNb(5, 20);
-    int defense = genererNb(5, 20);
-    int pv = genererNb(10, 50);
-    int capacite = genererNb(20, 100);
-    int lvl = genererNb(1, 10);
-    int exp = genererNb(0, 100);
+	Vaisseau* vaisseau(0);
+	//Faction* maFaction = getRandomFaction();
+	std::string nom = vaisseau->genererNomAleatoire();
 
-    std::vector<std::string> shipNames = {
-        "Liberator", "Myrmidon", "Insurgent", "Night", "Fade", "STS Pennsylvania",
-        "SS Immortal", "BS Traveler", "HMS Juggernaut", "HWSS Vanquisher",
-        "Trident", "Bastion", "Reliant", "Karma", "Panama", "SC Warrior",
-        "STS Immortal", "HMS Stormspike", "HMS Deonida", "ISS Utopia",
-        "Stalker", "Anarchy", "Invader", "Immortal", "ISS NATHAN", "HWSS Alice",
-        "USS Lancaster", "ISS Storm", "STS Raving", "HMS Deinonychus"
-    };
 
-    int randomIndex = rand() % shipNames.size();
-    std::string nom = shipNames[randomIndex];
+	int nb = Utilitaire::genererNb(1, 3);
+	if (nb == 1)
+		vaisseau = new Transport(maFaction, nom);
+	else if (nb == 2)
+		vaisseau = new Guerre(maFaction, nom);
+	else
+		vaisseau = new Livraison(maFaction, nom);
 
-    return new vaisseau(attaque, defense, pv, capacite, lvl, exp, nom);
+	return vaisseau;
 }
-
 
 Faction* FactoryVaisseau::getRandomFaction()
 {
-    srand(time(0));
-    int attaque = genererNb(5, 10);
-    int defense = genererNb(5, 10);
-    int pv = genererNb(10, 30);
-    int capacite = genererNb(20, 60);
-    std::string nom = "Faction_" + std::to_string(genererNb(1, 50));
-    return new Faction(attaque, defense, pv, capacite);
+	Faction* faction(0);
+	
+
+	int nb = Utilitaire::genererNb(1, 3);
+	if (nb == 1)
+		faction = new Faction("ATM");
+	else if (nb == 2)
+		faction = new Faction("ROUGE");
+	else
+		faction = new Faction("BLEUE");
+
+	return faction;
 }
+
 

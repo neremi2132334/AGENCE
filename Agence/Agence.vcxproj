@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{86247e6d-4069-4430-ad86-8c7c37c83ed8}</ProjectGuid>
+    <ProjectGuid>{1e512f4a-718f-4cc0-b82f-bae6fbf0b0e3}</ProjectGuid>
     <RootNamespace>Agence</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -130,12 +130,22 @@
     <ClCompile Include="Agence.cpp" />
     <ClCompile Include="Faction.cpp" />
     <ClCompile Include="FactoryVaisseau.cpp" />
-    <ClCompile Include="vaisseau.cpp" />
+    <ClCompile Include="Guerre.cpp" />
+    <ClCompile Include="Livraison.cpp" />
+    <ClCompile Include="Station.cpp" />
+    <ClCompile Include="Transport.cpp" />
+    <ClCompile Include="Utilitaire.cpp" />
+    <ClCompile Include="Vaisseau.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Faction.h" />
     <ClInclude Include="FactoryVaisseau.h" />
-    <ClInclude Include="vaisseau.h" />
+    <ClInclude Include="Guerre.h" />
+    <ClInclude Include="Livraison.h" />
+    <ClInclude Include="Station.h" />
+    <ClInclude Include="Transport.h" />
+    <ClInclude Include="Utilitaire.h" />
+    <ClInclude Include="Vaisseau.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

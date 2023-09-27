@@ -1,30 +1,16 @@
 #pragma once
 #include <string>
-
-
 class Faction
 {
 protected:
-
-    int attaque;
-
-    int defense;
-
-    int pv;
-
-    int capacite;
-
-    std::string nom;
-
-
+	int attaque;
+	int defense;
+	int vie;
+	int capacite;
+	std::string nom;
 public:
-
-    Faction();
-    Faction(int att, int def, int pv, int capacite);
-
-    std::string getNom();
-
-
-
+	Faction();
+	Faction(std::string name);
+	std::string getNom();
 };
 

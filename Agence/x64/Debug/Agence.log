@@ -1,2 +1,13 @@
-﻿FactoryVaisseau.obj : error LNK2019: symbole externe non résolu "public: __cdecl Faction::Faction(int,int,int,int)" (??0Faction@@QEAA@HHHH@Z) référencé dans la fonction "private: static class Faction * __cdecl FactoryVaisseau::getRandomFaction(void)" (?getRandomFaction@FactoryVaisseau@@CAPEAVFaction@@XZ)
-M:\code\Interface et base de données\Agence\x64\Debug\Agence.exe : fatal error LNK1120: 1 externes non résolus
+﻿  Agence.cpp
+  Faction.cpp
+  FactoryVaisseau.cpp
+  Guerre.cpp
+  Livraison.cpp
+  Station.cpp
+  Transport.cpp
+  Utilitaire.cpp
+C:\Users\2233318\Documents\Code\JeuxVideo\AgencePOO\Agence\Agence\Utilitaire.cpp(6,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  Vaisseau.cpp
+C:\Users\2233318\Documents\Code\JeuxVideo\AgencePOO\Agence\Agence\Vaisseau.cpp(75,59): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  Génération de code en cours...
+  Agence.vcxproj -> C:\Users\2233318\Documents\Code\JeuxVideo\AgencePOO\Agence\x64\Debug\Agence.exe
